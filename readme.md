@@ -1,0 +1,1 @@
+this landing page is for light mode
