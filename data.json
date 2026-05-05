@@ -1,0 +1,79 @@
+{
+  "pages": {
+    "home": {
+      "title": "Postal <span class=\"highlight\">Security</span> Incident Reporting System",
+      "subtitle": "Report, track and analyze postal security incidents with real-time collaboration and centralized governance oversight.",
+      "content": "The PSIRP platform helps postal operators and investigators log incidents, manage follow-up actions, and maintain a secure chain of custody for every report.",
+      "buttons": [
+        {
+          "label": "User Login",
+          "href": "https://psirp-2.dotme.com.my/login",
+          "type": "primary"
+        }
+      ],
+      "infoTitle": "Key Features",
+      "infoCards": [
+        {
+          "icon": "./assets/Logo MCMC.svg",
+          "title": "Centralized Reporting",
+          "description": "Capture incidents in one secure place for faster follow-up and better coordination."
+        },
+        {
+          "icon": "./assets/Logo MCMC.svg",
+          "title": "Real-Time Alerts",
+          "description": "Notify the right team immediately so critical issues are addressed without delay."
+        },
+        {
+          "icon": "./assets/Logo MCMC.svg",
+          "title": "Secure Oversight",
+          "description": "Monitor every report with audit-ready controls, compliance traceability, and strong access control."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Need assistance? Reach our support team for questions about incident reporting, system access, or account help.",
+      "content": "Email: support@psirp.my\nPhone: +60 3 1234 5678\nOffice: 123 Post St, Kuala Lumpur",
+      "details": [
+        {
+          "label": "Support Hours",
+          "value": "Mon - Fri, 9:00 AM - 6:00 PM"
+        },
+        {
+          "label": "Response Time",
+          "value": "Within 24 hours"
+        }
+      ]
+    },
+    "help": {
+      "title": "Help",
+      "subtitle": "Learn how to use PSIRP, submit incidents quickly, and find answers to common questions.",
+      "content": "Visit the help resources below to get the most out of the PSIRP system.",
+      "details": [
+        {
+          "label": "How to report an incident",
+          "value": "Use the report form and attach any supporting evidence before submission."
+        },
+        {
+          "label": "Tracking status",
+          "value": "Check incident status from the dashboard after submission."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy & Terms",
+      "subtitle": "Your data is protected and handled according to the highest privacy and security standards.",
+      "content": "PSIRP collects only the information needed to process incident reports and support your organization. We do not share your personal details with third parties unless required by law.",
+      "details": [
+        {
+          "label": "Data use",
+          "value": "Incident reports are stored securely and used only for investigation and tracking purposes."
+        },
+        {
+          "label": "Retention",
+          "value": "Records are kept according to regulatory requirements and internal retention policies."
+        }
+      ]
+    }
+  }
+}
