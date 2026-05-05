@@ -189,6 +189,17 @@ main {
   border-top: 1px solid #ececec;
 }
 
+#info-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif; 
+    font-size: clamp(48px, 5vw, 42px); /* Responsive sizing */
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: #2D2D2D;
+    font-weight: 400;
+    margin-bottom: 4rem;
+}
+
 .info-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(220px, 1fr));
@@ -202,6 +213,55 @@ main {
   border-radius: 18px;
   padding: 1.75rem;
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.05);
+  
+  /* Required for hologram positioning */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* The holographic shimmer layer */
+.info-card::before {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 300%;
+  height: 300%;
+  /* A multi-color linear gradient with low opacity */
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.3) 30%,
+    rgba(0, 255, 255, 0.1) 40%,
+    rgba(255, 0, 255, 0.1) 50%,
+    rgba(0, 255, 255, 0.1) 60%,
+    rgba(255, 255, 255, 0.3) 70%,
+    transparent 80%
+  );
+  transition: all 0.5s ease;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Hover States */
+.info-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.info-card:hover::before {
+  top: -50%;
+  left: -50%;
+  opacity: 1;
+}
+/* Target the title specifically */
+.info-card h3 {
+  font-weight: 450;
+  margin-bottom: 0.75rem; /* Optional: adds space above description */
+  color: #333333;        /* Optional: set a base color */
 }
 
 .card-heading {
