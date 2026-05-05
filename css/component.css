@@ -130,6 +130,12 @@ main {
   margin-bottom: 4rem;
 }
 
+.highlight {
+  color: #E64A19;       /* The orange-red accent color */
+  font-style: italic;   /* Makes it italic */
+  font-weight: inherit; /* Ensures it matches the thickness of the surrounding text */
+}
+
 .page-section h2 {
   font-size: clamp(2rem, 3vw, 3rem);
 }
