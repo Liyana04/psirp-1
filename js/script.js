@@ -27,11 +27,32 @@ function createButton(item) {
   const button = document.createElement('a');
   button.className = item.type === 'primary' ? 'btn-primary' : 'btn-secondary';
   button.textContent = item.label;
-  button.href = item.href || '#';
+  
+  // 1. Force a clean absolute URL to prevent 404s from relative pathing
+  if (item.href) {
+    try {
+      const url = new URL(item.href);
+      button.href = url.href;
+    } catch (e) {
+      button.href = item.href; // Fallback if it's already a string
+    }
+  } else {
+    button.href = '#';
+  }
+
+  // 2. Standardize target handling
   if (item.href && item.href.startsWith('http')) {
     button.target = '_blank';
     button.rel = 'noopener noreferrer';
+    
+    // 3. Optional: Prevent "bubbling" issues that cause channel errors
+    button.addEventListener('click', (e) => {
+      // If it's a simple link, we don't need e.preventDefault(),
+      // but stopping propagation can stop extensions from interfering.
+      e.stopPropagation();
+    });
   }
+  
   return button;
 }
 
