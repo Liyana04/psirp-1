@@ -11,29 +11,32 @@
           "type": "primary"
         }
       ],
+        "mockupTitle": "Advanced Platform Mockup",
+        "mockupSubtitle": "Explore the upcoming administrative interface designed for high-efficiency incident tracking and centralized governance.",
+        "mockupImage": "./assets/mockup.png",
       "infoTitle": "Key Features",
       "infoCards": [
         {
-          "icon": "./assets/Logo MCMC.svg",
-          "title": "Centralized Reporting",
-          "description": "Capture incidents in one secure place for faster follow-up and better coordination."
+          "icon": "./assets/fast-reporting.svg",
+          "title": "Fast Reporting",
+          "description": "Streamline your reporting process and ensure every detail is captured accurately by choosing to submit incidents quickly with guided forms."
         },
         {
-          "icon": "./assets/Logo MCMC.svg",
-          "title": "Real-Time Alerts",
-          "description": "Notify the right team immediately so critical issues are addressed without delay."
+          "icon": "./assets/real-time.svg",
+          "title": "Real-Time Tracking",
+          "description": "Monitor incident status with live updates and real-time tracking to ensure your team remains synchronized during critical events."
         },
         {
-          "icon": "./assets/Logo MCMC.svg",
-          "title": "Secure Oversight",
-          "description": "Monitor every report with audit-ready controls, compliance traceability, and strong access control."
+          "icon": "./assets/secure.svg",
+          "title": "Secure & Compliant",
+          "description": "Prioritize the absolute integrity of your data by implementing robust end-to-end encryption with comprehensive audit trails."
         }
       ]
     },
     "contact": {
       "title": "Contact",
       "subtitle": "Need assistance? Reach our support team for questions about incident reporting, system access, or account help.",
-      "content": "Email: support@psirp.my\nPhone: +60 3 1234 5678\nOffice: 123 Post St, Kuala Lumpur",
+      "content": "Email: ain.dotme@gmail.com\nPhone: +60 3 1234 5678\nOffice: DotMe Group Sdn. Bhd. No. 24-2 Jalan 4/76C, Desa Pandan, 55100 Kuala Lumpur",
       "details": [
         {
           "label": "Support Hours",

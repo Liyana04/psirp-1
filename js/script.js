@@ -12,6 +12,11 @@ const sectionText = document.getElementById('section-text');
 const sectionDetails = document.getElementById('section-details');
 const navLinks = document.querySelectorAll('[data-page].nav-link');
 
+const mockupSection = document.getElementById('mockup-section');
+const mockupTitle = document.getElementById('mockup-title');
+const mockupSubtitle = document.getElementById('mockup-subtitle');
+const mockupImageContainer = document.getElementById('mockup-image-container');
+
 let siteData = null;
 
 async function loadSiteData() {
@@ -89,11 +94,24 @@ function renderPage(pageKey) {
 
   if (pageKey === 'home') {
     heroSection.classList.remove('hidden');
+    mockupSection.classList.remove('hidden'); // Show new section
     infoSection.classList.remove('hidden');
     pageSection.classList.add('hidden');
     pageTitle.innerHTML = page.title;
     pageSubtitle.textContent = page.subtitle;
     heroButtons.innerHTML = '';
+    mockupTitle.textContent = page.mockupTitle || '';
+    mockupSubtitle.textContent = page.mockupSubtitle || '';
+
+    if (page.mockupImage) {
+    // Clear any previous background styles
+    mockupImageContainer.style.backgroundImage = 'none';
+    
+    // Insert an image tag to ensure the full image renders
+    mockupImageContainer.innerHTML = `
+        <img src="${page.mockupImage}" alt="Mockup" class="mockup-img">
+    `;
+}
 
     if (Array.isArray(page.buttons)) {
       page.buttons.forEach(item => {
@@ -110,6 +128,7 @@ function renderPage(pageKey) {
     infoTitle.textContent = page.infoTitle || '';
   } else {
     heroSection.classList.add('hidden');
+    mockupSection.classList.add('hidden'); // Hide on other pages
     infoSection.classList.add('hidden');
     pageSection.classList.remove('hidden');
     sectionTitle.textContent = page.title;
